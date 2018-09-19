@@ -44,3 +44,4 @@ for item in DataTest:
     print(temToday)
     print('Added line')
     print('changes maded by wut')
+    print('second changes maded by wut')
