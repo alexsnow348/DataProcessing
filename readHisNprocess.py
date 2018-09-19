@@ -9,17 +9,17 @@ dataH = list(dataHD.DataH)
 date = time.strftime('%Y/%m/%d')
 temToday = list()
 
-newDataFirst5Min = ['A','D','F','O', 'a','L','P','S','K']
-newDataNext5Min = ['A','O','W', 'b','K','L']
-DataTest = [newDataFirst5Min,newDataNext5Min]
+newDataFirst5Min = ['A', 'D', 'F', 'O', 'a', 'L', 'P', 'S', 'K']
+newDataNext5Min = ['A', 'O', 'W', 'b', 'K', 'L']
+DataTest = [newDataFirst5Min, newDataNext5Min]
 
-for  item in DataTest:
+for item in DataTest:
     newVistor = 0
     repeatedVistitor = 0
     repetedToday = 0
     staff = 0
     for each in item:
-        if each not in  dataS:
+        if each not in dataS:
             if each in dataH:
                 if each not in temToday:
                     repeatedVistitor += 1
@@ -28,8 +28,8 @@ for  item in DataTest:
                     repetedToday += 1
             else:
                 if each not in temToday:
-                     newVistor += 1
-                     temToday.append(each)
+                    newVistor += 1
+                    temToday.append(each)
                 else:
                     repetedToday += 1
         else:
@@ -42,3 +42,4 @@ for  item in DataTest:
     print("repetedToday:" + str(repetedToday))
     print("todayTemp:")
     print(temToday)
+    print('Added line')
